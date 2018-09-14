@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text size changing</title>
+	</head>
+	<body>
+		<center><p id="t"></p></center>
+		<script type="text/javascript">
+			var tt=document.getElementById("t");
+			var fs=5;		
+			var v1=setInterval(f1,250);
+			var v2;
+			function f1()
+			{
+				tt.innerHTML="Text Growing";
+				fs += 5;
+				tt.setAttribute('style',"font-size:"+fs+"px;color:red");
+				if(fs==50){
+					clearInterval(v1);
+					v2=setInterval(f2,250);
+				}
+			}
+
+			function f2()
+			{
+				tt.innerHTML="Text Shrinking";
+				fs -= 5;
+				tt.setAttribute('style',"font-size:"+fs+"px; color:blue");
+				if(fs==5){
+					clearInterval(v2);
+					v1=setInterval(f1,250);
+					
+				}
+				
+			}
+		</script>
+	</body>
+</html>

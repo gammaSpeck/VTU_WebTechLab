@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="stdL.css"?>
+
+<stdList>
+	<h1> The list of students are: </h1>
+	<student>
+		<usn>	   1CR15CS088	</usn>
+		<name>	    M.Darshan	</name>
+		<collName>   CMRIT	</collName>
+		<branch>      CSE	</branch>
+		<joinYear>    2015	</joinYear>
+		<email>	 mdar15cs@cmrit.ac.in	</email>
+	</student>
+
+	<student>
+		<usn>	   1CR15CS089	</usn>
+		<name>	 Madhusoodhanan KM	</name>
+		<collName>   CMRIT	</collName>
+		<branch>      CSE	</branch>
+		<joinYear>    2015	</joinYear>
+		<email>	 makm15cs@cmrit.ac.in	</email>
+	</student>
+
+	<student>
+		<usn>	   1CR15CS090	</usn>
+		<name>	  Malavika Vinay	</name>
+		<collName>   CMRIT	</collName>
+		<branch>      CSE	</branch>
+		<joinYear>    2015	</joinYear>
+		<email>	 mavi15cs@cmrit.ac.in	</email>
+	</student>
+
+</stdList>
+

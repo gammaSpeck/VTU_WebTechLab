@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Calculator</title>
+
+		<style>
+			input{
+				width:100%;
+				height:100%;
+				color:red;
+			}
+	
+			th{
+				color:green;
+			}
+		</style>
+
+		<script type="text/javascript"> 
+			function display(x)							
+			{
+				document.getElementById("t").value += x;
+			}
+			function compute()
+			{
+				var x=document.getElementById("t").value;
+				document.getElementById("t").value = eval(x);
+			}
+		</script>
+	</head>
+
+	<body>
+		
+			<center>
+				<table border="2">
+					<form>
+					<tr> <th colspan="4">CALCULATOR</th> </tr>
+					<tr> <td colspan="4"><input type="text" id="t" /> </td> </tr>
+
+					<tr>
+						<td> <input type="button" value="1" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="2" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="3" onclick="display(this.value)"/> </td>
+						<td><input type="button" value="+" onclick="display(this.value)"/> </td>
+					<tr>
+						<td> <input type="button" value="4" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="5" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="6" onclick="display(this.value)"/> </td>
+						<td><input type="button" value="-" onclick="display(this.value)"/> </td>
+					</tr>
+
+					<tr>
+						<td> <input type="button" value="7" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="8" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="9" onclick="display(this.value)"/> </td>
+						<td><input type="button" value="*" onclick="display(this.value)"/> </td>
+					</tr>
+					
+					<tr>
+						<td> <input type="button" value="0" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="." onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="%" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="/" onclick="display(this.value)"/> </td>
+					</tr>
+
+					
+					<tr>
+					</tr>
+					<tr>
+						<td colspan="2"> <input type="button" value="=" onclick="compute()"/> </td>
+						<td colspan="2"><input type="reset" value="CLEAR"/></td>
+					</tr>
+					</form>
+				</table>
+			</center>
+		
+	</body>
+</html>
+

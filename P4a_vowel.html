@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find That Vowel</title>
+	<script type="text/javascript">
+	
+
+	document.write("<h1> We shall find the position of that vowel, if it exists </h1>");
+
+
+	var str=prompt("Enter the String","");
+	document.write("String is: "+str+"</br>");
+	var c, x=0;
+	for(var i=0;i<str.length;i++)
+	{
+		c=str.charAt(i);
+		if(	c=='a' || c=='e' || c=='i' || c=='o' ||  c=='u'){
+			document.write("Vowel '"+c+"' found at position: "+(i+1)); 
+			x++;	
+			break;
+		}
+	}
+	if(x==0)
+		document.write("No Vowel Found");
+
+
+	</script>
+</head>
+</html>

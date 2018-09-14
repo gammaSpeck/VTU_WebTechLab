@@ -1,0 +1,27 @@
+h1{
+	display: block;
+	margin: 5px;
+	background-color: #fcf;
+	border-radius: 20%;
+	padding: 15px;
+	font-size: 30px;
+	font-style: italic;
+	text-align: center;
+}
+stdList{
+	background-color: gray;
+}
+
+student{
+	display: inline-block;
+	border-radius: 10%;
+	background-color: #ffa;
+	margin: 10px;
+	padding: 15px;
+	text-align: center;
+
+}
+
+usn, name, collName, branch, joinYear, email{
+	display: block;
+}

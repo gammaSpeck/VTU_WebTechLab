@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome</title>
+	<script type="text/javascript"> 
+
+		var n=parseInt(prompt("Enter n",""));
+		var r=0, p=0;
+		var a=n;
+		while(a>0){
+			r=a%10;
+			p=p*10+r;
+			a=Math.floor(a/10);
+		}
+
+		document.write("Number:"+n+"<br> Reverse: "+p);
+		if(n==p){ alert("Palindrome"); }
+		else {alert("Not a palindrome")}
+
+	</script>
+
+</head>
+</html>
