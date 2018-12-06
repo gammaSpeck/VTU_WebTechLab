@@ -13,7 +13,7 @@
 		if(preg_match( '/xas$/', $j)) # Store word ending in xas in 0th index
 			$elements[0] = $j;
 
-		if(preg_match('/^k.*s$/i', $j)) # Stores word starting with k ands in s in 1st index
+		if(preg_match('/^k.*s$/i', $j)) # Stores word starting with k ands in s in 1st index (If you don't put that 'i' after /, for some weird reason PHP misbehaves and gives an error. Don't forget it !!
 			$elements[1] = $j;
 
 		if(preg_match('/^M.*s$/', $j)) # Stores word starting with M ands in s in 2nd index
