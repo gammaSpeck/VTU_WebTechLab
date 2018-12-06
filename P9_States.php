@@ -1,7 +1,7 @@
 <?php
 	$states = "Mississippi Alabama Texas Massachusetts Kansas";
 	$elements = array();
-	$states1 = explode(' ',$states); # This func splits the sentence into words by spaces
+	$states1 = explode(' ',$states); # This func splits the sentence into words on the basis of ' ' (space) and stores in an ARRAY
 	$len = count($states1);
 
 	echo "Original Array :<br>";	# Prints out all elements stored in the array 
@@ -13,10 +13,10 @@
 		if(preg_match( '/xas$/', $j)) # Store word ending in xas in 0th index
 			$elements[0] = $j;
 
-		if(preg_match('/^k.*s$/i', $j)) #Stores word starting with k ands in s in 1st index
+		if(preg_match('/^k.*s$/i', $j)) # Stores word starting with k ands in s in 1st index
 			$elements[1] = $j;
 
-		if(preg_match('/^M.*s$/', $j)) #Stores word starting with M ands in s in 2nd index
+		if(preg_match('/^M.*s$/', $j)) # Stores word starting with M ands in s in 2nd index
 			$elements[2] = $j;
 
 		if(preg_match('/a$/', $j)) # Stores word ending in a in 3rd index

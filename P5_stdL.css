@@ -1,9 +1,9 @@
-h1{
-	display: block;
+h1{									
+	display: block;		/* This means that each <h1> tag is a seperate block Spans across whole width of the page*/
 	margin: 5px;
-	background-color: #fcf;
-	border-radius: 20%;
-	padding: 15px;
+	background-color: #fcf; /* Keep any background color, it doesn't matter */
+	border-radius: 20%;		/* This feature makes the block have ROUNDED edges. can be % or px */
+	padding: 15px;			/* Space around the text in the block */
 	font-size: 30px;
 	font-style: italic;
 	text-align: center;
@@ -13,7 +13,7 @@ stdList{
 }
 
 student{
-	display: inline-block;
+	display: inline-block;	/* This means that its a block WRAPPED around the longest text in that block */
 	border-radius: 10%;
 	background-color: #ffa;
 	margin: 10px;
@@ -23,5 +23,5 @@ student{
 }
 
 usn, name, collName, branch, joinYear, email{
-	display: block;
+	display: block;		/* the reason we make them a block is that each of these tags can begin in a new line */
 }

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<?xml-stylesheet type="text/css" href="P5_stdL.css"?>
+<?xml version="1.0" encoding="UTF-8" ?>					<!-- This is important as it states the character encoding -->
+<?xml-stylesheet type="text/css" href="P5_stdL.css"?>	<!-- Code to link the CSS style to this XML File -->
 
-<stdList>
-	<h1> The list of students are: </h1>
+<!-- Remember, in XML, NONE of the tags are predefined or styled. NONE of the HTML tags will work. EVERYTHING needs to be styled and defined in CSS seperately -->
+<stdList>											
+	<h1> The list of students are: </h1>			<!-- Won't actually be a <h1> tag as in HTML unless defined so EXPLICITLY -->
 	<student>
 		<usn>	   1CR15CS088	</usn>
 		<name>	    M.Darshan	</name>

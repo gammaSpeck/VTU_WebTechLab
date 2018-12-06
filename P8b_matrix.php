@@ -2,40 +2,40 @@
 	$A=array(array(1,2,3),array(4,5,6),array(7,8,9));
 	$B=array(array(1,2,1),array(2,3,4),array(1,3,5));
 
-	$r = count($A);
-	$c = count($A[0]);
+	$r = count($A);					# Num of rows
+	$c = count($A[0]);				# Num of columns
 
-	function display($x,$r,$c)
-	{				
+	function display($x,$r,$c)		# Function to simply display the Matrix
+	{
 		for($i=0; $i<$r; $i++)
-		{	
+		{
             for($j=0; $j<$c; $j++)
 				print $x[$i][$j]." ";
             print "<br>";
         }
 	}
     
-    function transpose($x,$r,$c)
+    function transpose($x,$r,$c)	# Function to transpose the matrix
 	{				
 		for($i=0; $i<$r; $i++)
-		{	
+		{
             for($j=0; $j<$c; $j++)
 				print $x[$j][$i]." ";
             print "<br>";
         }
 	}
 
-    function add($a,$b,$r,$c)
+    function add($a,$b,$r,$c)		# Function to add two matrices
     {
-        for($i=0; $i<$r; $i++)
-		{	
-            for($j=0; $j<$c; $j++)
+		for($i=0; $i<$r; $i++)
+		{
+			for($j=0; $j<$c; $j++)
 				print $a[$i][$j]+$b[$i][$j]." ";
             print "<br>";
         }
     }
 
-     function multiply($a,$b,$r,$c)
+     function multiply($a,$b,$r,$c)	# Function to add two matrices
     {
         $sum=0;
         for($i=0; $i<$r; $i++)
@@ -52,16 +52,12 @@
         return $m;
     }
     
-
-
-
-
+	# Displays all the needed Information 
     print "Matrix A is: <br>";
 	display($A,$r,$c);
     print "<br> Transpose of A is : <br>";
     transpose($A,$r,$c);
 	print "<br><br>";
-
 
     print "Matrix B is: <br>";
 	display($B,$r,$c);
@@ -74,7 +70,7 @@
     print "<br><br>";
 
     print "Product of A and B is : <br>";
-    $M=multiply($A,$B,$r,$c);
+    $M = multiply($A,$B,$r,$c);
 	display($M,$r,$c);
 
 ?> 

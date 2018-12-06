@@ -16,45 +16,45 @@
 		</style>
 
 		<script type="text/javascript"> 
-			function display(x)							
-			{
-				document.getElementById("t").value += x;
+			function display(x){							// Simply gets the value of the buttoon that is pressed and puts it on the text bar
+				document.getElementById("t").value += x;	// The + means append. Any new button input clicked on, is APPENDED onto the already existing text
 			}
-			function compute()
-			{
-				var x=document.getElementById("t").value;
-				document.getElementById("t").value = eval(x);
+			function compute(){
+				var x=document.getElementById("t").value;		// This read the whole arithmatic operation and evaluates
+				document.getElementById("t").value = eval(x);	// Puts the Evaluated answer back onto the text bar 
 			}
 		</script>
 	</head>
 
 	<body>
 		
-			<center>
-				<table border="2">
-					<form>
-					<tr> <th colspan="4">CALCULATOR</th> </tr>
-					<tr> <td colspan="4"><input type="text" id="t" /> </td> </tr>
+		<center>
+			<table border="2">
+				<form>																			<!-- The only reason we use the <form> is for the CLEAR button to work -->
+					<tr> <th colspan="4">CALCULATOR</th> </tr>									
+					<tr> <td colspan="4"><input type="text" id="t" /> </td> </tr>				<!-- This is the TEXT BAR where you can see the calculations happen -->
 
 					<tr>
-						<td> <input type="button" value="1" onclick="display(this.value)"/> </td>
-						<td> <input type="button" value="2" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="1" onclick="display(this.value)"/> </td>	<!-- onclick dictates what happens when you click that button -->
+						<td> <input type="button" value="2" onclick="display(this.value)"/> </td>	<!-- Here, when normal number buttons are clicked, it is simply shown on the text bar -->
 						<td> <input type="button" value="3" onclick="display(this.value)"/> </td>
-						<td><input type="button" value="+" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="+" onclick="display(this.value)"/> </td>
+					</tr>
+
 					<tr>
 						<td> <input type="button" value="4" onclick="display(this.value)"/> </td>
 						<td> <input type="button" value="5" onclick="display(this.value)"/> </td>
 						<td> <input type="button" value="6" onclick="display(this.value)"/> </td>
-						<td><input type="button" value="-" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="-" onclick="display(this.value)"/> </td>
 					</tr>
 
 					<tr>
 						<td> <input type="button" value="7" onclick="display(this.value)"/> </td>
 						<td> <input type="button" value="8" onclick="display(this.value)"/> </td>
 						<td> <input type="button" value="9" onclick="display(this.value)"/> </td>
-						<td><input type="button" value="*" onclick="display(this.value)"/> </td>
+						<td> <input type="button" value="*" onclick="display(this.value)"/> </td>
 					</tr>
-					
+			
 					<tr>
 						<td> <input type="button" value="0" onclick="display(this.value)"/> </td>
 						<td> <input type="button" value="." onclick="display(this.value)"/> </td>
@@ -63,15 +63,14 @@
 					</tr>
 
 					
+					
 					<tr>
+						<td colspan="2"> <input type="button" value="=" onclick="compute()"/> </td>	<!-- Here, all the contents in the text bar is taken and a solution is evaluated -->
+						<td colspan="2"><input type="reset" value="CLEAR"/></td>					<!-- Simply makes the text bar become empty -->
 					</tr>
-					<tr>
-						<td colspan="2"> <input type="button" value="=" onclick="compute()"/> </td>
-						<td colspan="2"><input type="reset" value="CLEAR"/></td>
-					</tr>
-					</form>
-				</table>
-			</center>
+				</form>
+			</table>
+		</center>
 		
 	</body>
 </html>

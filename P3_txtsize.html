@@ -4,32 +4,34 @@
 		<title>Text size changing</title>
 	</head>
 	<body>
-		<center><p id="t"></p></center>
+		<center><p id="t"></p></center>					<!-- This is the paragraph that grows and shrinks -->
+
 		<script type="text/javascript">
+
 			var tt=document.getElementById("t");
-			var fs=5;		
-			var v1=setInterval(f1,250);
+			var fs=5;									// The smallest font size
+			var v1=setInterval(f1,250);					// First set the Growing interval
 			var v2;
-			function f1()
+
+			function f1()					// Text groowing func
 			{
-				tt.innerHTML="Text Growing";
+				tt.innerHTML="Text Growing";									//innerHTML is that line which enables one to put HTML inside the object ID
 				fs += 5;
-				tt.setAttribute('style',"font-size:"+fs+"px;color:red");
+				tt.setAttribute('style',"font-size:"+fs+"px;color:red");		// This line SETS the desired attribute values
 				if(fs==50){
-					clearInterval(v1);
-					v2=setInterval(f2,250);
+					clearInterval(v1);											//When max font size of 50 is reached, clear the growing interval
+					v2=setInterval(f2,250);										// Then set the shrinking interval
 				}
 			}
-
-			function f2()
+	
+			function f2()					// Text shrinking func
 			{
 				tt.innerHTML="Text Shrinking";
 				fs -= 5;
 				tt.setAttribute('style',"font-size:"+fs+"px; color:blue");
-				if(fs==5){
+				if(fs==5){														//When min font size of 5 is reached, clear the shrinking interval
 					clearInterval(v2);
-					v1=setInterval(f1,250);
-					
+					v1=setInterval(f1,250);										// Then set the growing interval 	
 				}
 				
 			}
